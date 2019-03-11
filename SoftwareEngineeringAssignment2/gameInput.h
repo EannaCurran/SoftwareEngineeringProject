@@ -15,8 +15,6 @@
 #define GAMEINPUT_H
 
 
-#include "defineAssignment2.h"
-
 int gameInput();
 
 

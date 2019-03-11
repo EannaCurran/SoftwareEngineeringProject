@@ -12,10 +12,10 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
 #include <stddef.h>
-#include "gameInitialisation.h"
 #include "defineAssignment2.h"
-
  
 
 void initialize_board(struct square board[][NUM_COLUMNS]){

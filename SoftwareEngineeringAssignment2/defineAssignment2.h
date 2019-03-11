@@ -4,8 +4,6 @@
 #ifndef DEFINEASSIGNMENT2_H
 #define DEFINEASSIGNMENT2_H
 
-#include <stddef.h>
-
 // Number of rows of the board
 #define NUM_ROWS 6
 // Number of columns of the board

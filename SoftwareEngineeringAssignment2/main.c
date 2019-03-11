@@ -18,6 +18,9 @@
 
 #include "defineAssignment2.h"
 #include "gameInput.h"
+#include "gameInitialisation.h"
+#include "gamePrint.h"
+#include "gamePlay.h"
 
 int main(void){
   player players[6];
