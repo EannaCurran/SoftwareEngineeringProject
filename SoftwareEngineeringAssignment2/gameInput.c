@@ -14,11 +14,13 @@
 #include "gameInput.h"
 #include "defineAssignment2.h"
 
-int gameInput(player players[]){
+
+int gameInput(){
   int numOfPlayers;
 
   printf("Welcome to Igel Argern");
   printf("Enter the number of players you want to play:");
+  return 0;
 }
 
 /*Function to clear the stdin buffer in case of overflow chars after recieving input*/
@@ -35,4 +37,3 @@ void clearLine(void){
 
   return;
 }
->>>>>>> 4885a88a3ad38d71ef65c02d62e4ec73dd549887

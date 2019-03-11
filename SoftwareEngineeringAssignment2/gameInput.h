@@ -14,7 +14,10 @@
 #ifndef GAMEINPUT_H
 #define GAMEINPUT_H
 
-int gameInput(player players[]);
+
+#include "defineAssignment2.h"
+
+int gameInput();
 
 
 void clearLine(void);

@@ -1,2 +1,2 @@
-c:/mingw/bin/../lib/gcc/mingw32/8.2.0/../../../../mingw32/bin/ld.exe: C:\Users\ANNA~1\AppData\Local\Temp\ccolrvzi.o:main.c:(.text+0x1c): undefined reference to `gameInput'
+c:/mingw/bin/../lib/gcc/mingw32/8.2.0/../../../../mingw32/bin/ld.exe: C:\Users\ANNA~1\AppData\Local\Temp\ccqZZ5II.o:main.c:(.text+0x12): undefined reference to `gameInput'
 collect2.exe: error: ld returned 1 exit status

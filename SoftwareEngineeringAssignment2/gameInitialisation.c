@@ -12,9 +12,11 @@
  */
 
 #include "gameInitialisation.h"
+#include "defineAssignment2.h"
 
+ 
 
-void initialize_board(square board[][NUM_COLUMNS]){
+void initialize_board(struct square board[][NUM_COLUMNS]){
 
     for (int i =0; i< NUM_ROWS; i++){
 
