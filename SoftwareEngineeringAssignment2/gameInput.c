@@ -12,4 +12,22 @@
  */
 
 #include "gameInput.h"
+<<<<<<< HEAD
 int gameInput(player);
+=======
+
+/*Function to clear the stdin buffer in case of overflow chars after recieving input*/
+void clearLine(void){
+  /*Variables*/
+  int temp;
+
+  /*Do while loop to get chars from stdin and store them in temp till a new line*/
+  do{
+
+    temp = fgetc(stdin);
+
+  } while (temp != '\n' && temp != EOF);
+
+  return;
+}
+>>>>>>> 4885a88a3ad38d71ef65c02d62e4ec73dd549887

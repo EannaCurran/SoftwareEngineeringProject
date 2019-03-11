@@ -14,11 +14,16 @@
 #ifndef GAMEINPUT_H
 #define GAMEINPUT_H
 
+<<<<<<< HEAD
 int gameInput(player players[]){
   int numOfPlayers;
   
   printf("Welcome to Igel Argern");
   printf("Enter the number of players you want to play:");
 }
+=======
+
+void clearLine(void);
+>>>>>>> 4885a88a3ad38d71ef65c02d62e4ec73dd549887
 
 #endif /* GAMEINPUT_H */
