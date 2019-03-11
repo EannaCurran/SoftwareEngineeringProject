@@ -15,7 +15,7 @@
 #define GAMEINPUT_H
 
 
-int gameInput(struct player players[6]);
+int gameInput(struct player players[]);
 
 
 void clearLine();

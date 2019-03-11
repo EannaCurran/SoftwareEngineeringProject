@@ -18,7 +18,7 @@ enum stype{
 // Colours of tokens
 enum colour {
     RED, BLUE, GREEN, YELLOW, PINK, ORANGE
-};
+}colour;
 
 
 // Defines a token. 
