@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-/* 
+/*
  * File:   gamePrint.h
  * Author: John
  *
@@ -13,5 +13,10 @@
 
 #ifndef GAMEPRINT_H
 #define GAMEPRINT_H
+
+char print_token(token *t);
+void print_board(square board[][NUM_COLUMNS]);
+void printLine(void);
+
 
 #endif /* GAMEPRINT_H */
