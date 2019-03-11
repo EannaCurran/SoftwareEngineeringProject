@@ -19,7 +19,7 @@
 char printToken(token *t){
     if((*t).colourToken == PINK) return 'P';
     if((*t).colourToken == RED) return 'R';
-    if((*t).colourToken == BLU) return 'B';
+    if((*t).colourToken == BLUE) return 'B';
     if((*t).colourToken == GREEN) return 'G';
     if((*t).colourToken == ORANGE) return 'O';
     if((*t).colourToken == YELLOW) return 'Y';

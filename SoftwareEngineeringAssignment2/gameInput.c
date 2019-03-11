@@ -22,11 +22,14 @@ int gameInput(struct player players[6]){
   int numOfPlayers;
   
   printf("Welcome to Igel Argern\n");
-  printf("Enter the number of players you want to play:");
+  printf("Enter the number of players you want to play (2 - 6 players only:\n");
   do{
     scanf("%d", &numOfPlayers);
     clearLine();
-   while(numOfPlayers > 6 || numOfPlayers < 2)}
+    if(numOfPlayers > 6 || numOfPlayers < 2){
+        printf("Invalid input please try again.\n");
+    }
+  }while(numOfPlayers > 6 || numOfPlayers < 2);
 }
 
 /*Function to clear the stdin buffer in case of overflow chars after recieving input*/
