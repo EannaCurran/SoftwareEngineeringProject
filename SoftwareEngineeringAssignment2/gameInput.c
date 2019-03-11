@@ -17,17 +17,20 @@
 #include <stddef.h>
 #include "defineAssignment2.h"
 
-
-int gameInput(){
+// Function to receive user input 
+int gameInput(struct player players[6]){
   int numOfPlayers;
-
-  printf("Welcome to Igel Argern");
+  
+  printf("Welcome to Igel Argern\n");
   printf("Enter the number of players you want to play:");
-  return 0;
+  do{
+    scanf("%d", &numOfPlayers);
+    clearLine();
+   while(numOfPlayers > 6 || numOfPlayers < 2)}
 }
 
 /*Function to clear the stdin buffer in case of overflow chars after recieving input*/
-void clearLine(void){
+void clearLine(){
   /*Variables*/
   int temp;
 

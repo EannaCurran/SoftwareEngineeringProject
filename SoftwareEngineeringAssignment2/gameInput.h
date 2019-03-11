@@ -15,10 +15,10 @@
 #define GAMEINPUT_H
 
 
-int gameInput();
+int gameInput(struct player players[6]);
 
 
-void clearLine(void);
+void clearLine();
 
 
 #endif /* GAMEINPUT_H */
