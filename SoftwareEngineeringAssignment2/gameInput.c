@@ -36,8 +36,3 @@ void clearLine(void){
   } while (temp != '\n' && temp != EOF);
 
   return;
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> d638b43bb0f1e19f2f944fa7cac69d6fbfd0466b

@@ -11,6 +11,8 @@
  * Created on 11 March 2019, 16:13
  */
 
+#include <stdio.h>
+#include <stddef.h>
 #include "gameInitialisation.h"
 #include "defineAssignment2.h"
 
