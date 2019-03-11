@@ -13,6 +13,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 #include "defineAssignment2.h"
 #include "gameInput.h"
@@ -20,9 +21,11 @@
 
 
 
-int main(void)
-
+int main(void){
+  player players[6];
   square board[NUM_ROWS][NUM_COLUMNS];
+
+  int numPlayers = gameInput(players);
 
   return 0;
 }

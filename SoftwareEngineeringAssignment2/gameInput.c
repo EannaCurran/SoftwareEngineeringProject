@@ -4,11 +4,12 @@
  * and open the template in the editor.
  */
 
-/* 
+/*
  * File:   gameInput.c
  * Author: John
- * 
+ *
  * Created on 11 March 2019, 16:04
  */
 
 #include "gameInput.h"
+int gameInput(player);

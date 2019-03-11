@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-/* 
+/*
  * File:   gameInput.h
  * Author: John
  *
@@ -13,5 +13,12 @@
 
 #ifndef GAMEINPUT_H
 #define GAMEINPUT_H
+
+int gameInput(player players[]){
+  int numOfPlayers;
+  
+  printf("Welcome to Igel Argern");
+  printf("Enter the number of players you want to play:");
+}
 
 #endif /* GAMEINPUT_H */
