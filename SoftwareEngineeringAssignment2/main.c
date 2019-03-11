@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-/* 
+/*
  * File:   main.c
  * Author: John
  *
@@ -14,12 +14,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "defineAssignment2.h"
+#include "gameInput.h"
 
 
-int main(void) {
 
-    
-    
-    return 0;
+
+int main(void)
+
+  square board[NUM_ROWS][NUM_COLUMNS];
+
+  return 0;
 }
-
