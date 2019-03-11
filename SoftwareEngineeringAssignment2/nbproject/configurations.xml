@@ -7,6 +7,8 @@
       <itemPath>defineAssignment2.h</itemPath>
       <itemPath>gameInitialisation.h</itemPath>
       <itemPath>gameInput.h</itemPath>
+      <itemPath>gamePlay.h</itemPath>
+      <itemPath>gamePrint.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -17,6 +19,8 @@
                    projectFiles="true">
       <itemPath>gameInitialisation.c</itemPath>
       <itemPath>gameInput.c</itemPath>
+      <itemPath>gamePlay.c</itemPath>
+      <itemPath>gamePrint.c</itemPath>
       <itemPath>main.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -51,6 +55,14 @@
       </item>
       <item path="gameInput.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="gamePlay.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="gamePlay.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="gamePrint.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="gamePrint.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
     </conf>
@@ -83,6 +95,14 @@
       <item path="gameInput.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="gameInput.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="gamePlay.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="gamePlay.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="gamePrint.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="gamePrint.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
