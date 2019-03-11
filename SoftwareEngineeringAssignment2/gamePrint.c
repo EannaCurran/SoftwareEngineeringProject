@@ -16,7 +16,7 @@
 #include "gamePrint.h"
 
 
-char print_token(token *t){
+char printToken(token *t){
     if((*t).colourToken == PINK) return 'P';
     if((*t).colourToken == RED) return 'R';
     if((*t).colourToken == BLU) return 'B';
@@ -27,7 +27,7 @@ char print_token(token *t){
 }
 
 
-void print_board(square board[][NUM_COLUMNS]){
+void printBoard(square board[][NUM_COLUMNS]){
     printf("                THE BOARD\n");
     for(int i =0; i < NUM_ROWS; i++){
 
@@ -43,7 +43,7 @@ void print_board(square board[][NUM_COLUMNS]){
         for (int j = 0; j < NUM_COLUMNS; j++){
 
             if(board[i][j].stack != NULL){
-                c[1] = print_token(board[i][j].stack);
+                c[1] = printToken(board[i][j].stack);
             }
             else{
               c[1] = ' ';

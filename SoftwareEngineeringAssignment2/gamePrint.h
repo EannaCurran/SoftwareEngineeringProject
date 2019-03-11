@@ -14,8 +14,8 @@
 #ifndef GAMEPRINT_H
 #define GAMEPRINT_H
 
-char print_token(token *t);
-void print_board(square board[][NUM_COLUMNS]);
+char printToken(token *t);
+void printBoard(square board[][NUM_COLUMNS]);
 void printLine(void);
 
 

@@ -25,7 +25,9 @@ int main(void){
 
   int numPlayers = gameInput();
   initialize_board(board);
-  
+
+  printBoard(board);
+
 
   return 0;
 }
