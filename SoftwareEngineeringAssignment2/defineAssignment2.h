@@ -1,5 +1,6 @@
 // File containing definitions for variables 
 // Written by - John O'Donnell and Eanna Curran
+
 #ifndef DEFINEASSIGNMENT2_H
 #define DEFINEASSIGNMENT2_H
 

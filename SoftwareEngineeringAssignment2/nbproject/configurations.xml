@@ -5,6 +5,7 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>defineAssignment2.h</itemPath>
+      <itemPath>gameInput.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -13,6 +14,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>gameInput.c</itemPath>
       <itemPath>main.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -39,6 +41,10 @@
       </compileType>
       <item path="defineAssignment2.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="gameInput.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="gameInput.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
     </conf>
@@ -63,6 +69,10 @@
         </asmTool>
       </compileType>
       <item path="defineAssignment2.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="gameInput.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="gameInput.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
