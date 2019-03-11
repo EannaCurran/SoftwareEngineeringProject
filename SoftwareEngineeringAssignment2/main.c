@@ -24,5 +24,8 @@ int main(void)
 
   square board[NUM_ROWS][NUM_COLUMNS];
 
+
+
+
   return 0;
 }

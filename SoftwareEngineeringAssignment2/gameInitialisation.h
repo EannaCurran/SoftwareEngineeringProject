@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-/* 
+/*
  * File:   gameInitialisation.h
  * Author: John
  *
@@ -13,5 +13,8 @@
 
 #ifndef GAMEINITIALISATION_H
 #define GAMEINITIALISATION_H
+
+
+
 
 #endif /* GAMEINITIALISATION_H */
