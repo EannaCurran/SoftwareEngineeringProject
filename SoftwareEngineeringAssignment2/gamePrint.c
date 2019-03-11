@@ -51,7 +51,7 @@ void print_board(square board[][NUM_COLUMNS]){
             //if the square (i,j) is empty
 
             //c is assigned 'X' if the square represents an obstacle
-            if(board[i][j].type == OBSTACLE){}
+            if(board[i][j].type == OBSTACLE){
                     c[0] = '{';
                     c[2] = '}';
                   }
@@ -60,16 +60,17 @@ void print_board(square board[][NUM_COLUMNS]){
                   c[0] = ' ';
                   c[2] = ' ';
                 }
-            }
+        
             printf("|%s ", c);
-        }
-        printf ("|\n");
     }
+        printf ("|\n");
+    
     printLine();
     //prints the number of the columns at the end of the board
+    }
     printf("     1   2   3   4   5   6   7   8   9\n");
 }
 
-void printLine(void){
+void printLine(){
   printf("   -------------------------------------\n");
 }

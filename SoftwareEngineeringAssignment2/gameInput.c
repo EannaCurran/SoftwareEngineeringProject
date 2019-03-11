@@ -11,7 +11,10 @@
  * Created on 11 March 2019, 16:04
  */
 
-#include "gameInput.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stddef.h>
 #include "defineAssignment2.h"
 
 
@@ -34,5 +37,4 @@ void clearLine(void){
     temp = fgetc(stdin);
 
   } while (temp != '\n' && temp != EOF);
-
-  return;
+}
