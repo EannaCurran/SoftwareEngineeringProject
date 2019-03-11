@@ -19,17 +19,28 @@
 
 // Function to receive user input 
 int gameInput(struct player players[6]){
-  int numOfPlayers;
+  int numOfPlayers, i;
+  char playerColour[3];
   
   printf("Welcome to Igel Argern\n");
-  printf("Enter the number of players you want to play (2 - 6 players only:\n");
-  do{
+  printf("Enter the number of players you want to play (2 - 6 players only).\n");
+  
+  do {
     scanf("%d", &numOfPlayers);
     clearLine();
     if(numOfPlayers > 6 || numOfPlayers < 2){
         printf("Invalid input please try again.\n");
     }
-  }while(numOfPlayers > 6 || numOfPlayers < 2);
+  } while(numOfPlayers > 6 || numOfPlayers < 2);
+   
+  for(i = 0; i < numOfPlayers; i++){
+      printf("Enter player %d name.\n", (i+1));
+      // Scanning up to new line line character
+      scanf("%19[^\n]s", players[i].name);
+      clearLine();
+    
+  }
+  
 }
 
 /*Function to clear the stdin buffer in case of overflow chars after recieving input*/

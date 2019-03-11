@@ -41,7 +41,6 @@ typedef struct player{
     char name[20];
     //Players token colour
     enum colour playerColour;
-    
 }player; 
 
 
