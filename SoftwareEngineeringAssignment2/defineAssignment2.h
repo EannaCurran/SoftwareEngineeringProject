@@ -1,53 +1,45 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   defineAssignment2.h
- * Author: John
- *
- * Created on 11 March 2019, 14:40
- */
-
+// File containing definitions for variables 
+// Written by - John O'Donnell and Eanna Curran
 #ifndef DEFINEASSIGNMENT2_H
 #define DEFINEASSIGNMENT2_H
 
-//number of rows of the board
+// Number of rows of the board
 #define NUM_ROWS 6
-//number of columns of the board
+// Number of columns of the board
 #define NUM_COLUMNS 9
 
 
-//types of squares
+// Types of squares
 enum stype{
     NORMAL, OBSTACLE 
   };
 
-//colours of tokens
+// Colours of tokens
 enum colour {
     RED, BLU, GREEN, YELLOW, PINK, ORANGE
 };
 
 
-//defines a token. 
-//Note each token can be associated with a color
+// Defines a token. 
+// Note each token can be associated with a color
 typedef struct token{
-   enum colour colourPlayer;    
+   enum colour colourToken;    
 }token;
 
-//Defines a square of the board.
+// Defines a square of the board.
 typedef struct square{
-    //A square can be a NORMAL or an OBSTACLE square
+    // A square can be a NORMAL or an OBSTACLE square
      enum stype type;
-     //the stack of tokens that can be placed on the board square
+     // the stack of tokens that can be placed on the board square
      token * stack;      
 }square;
 
-
+// Defines each players information
 typedef struct player{
-    
+    // Name of player
+    char name[20];
+    //Players token colour
+    enum colour colourPlayer;
     
 }player; 
 
