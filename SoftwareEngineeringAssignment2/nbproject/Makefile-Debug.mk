@@ -39,7 +39,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/gameInput.o \
 	${OBJECTDIR}/gamePlay.o \
 	${OBJECTDIR}/gamePrint.o \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/stackFunctions.o
 
 
 # C Compiler Flags
@@ -90,6 +91,11 @@ ${OBJECTDIR}/main.o: main.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
+
+${OBJECTDIR}/stackFunctions.o: stackFunctions.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/stackFunctions.o stackFunctions.c
 
 # Subprojects
 .build-subprojects:
