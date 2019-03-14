@@ -17,19 +17,74 @@
 #include <stddef.h>
 #include "defineAssignment2.h"
 
+<<<<<<< HEAD
 // Function to receive user input
 int gameInput(struct player players[6]){
   int numOfPlayers;
 
+=======
+// Function to receive user input 
+int gameInput(struct player players[]){
+  int numOfPlayers;
+  char playerColour;
+  bool validColourInput = true;
+  
+>>>>>>> 2af1cbc4cc690f40ff89621c38df39bc0811b9e2
   printf("Welcome to Igel Argern\n");
-  printf("Enter the number of players you want to play (2 - 6 players only:\n");
-  do{
+  printf("Enter the number of players you want to play (2 - 6 players only).\n");
+  
+  do {
     scanf("%d", &numOfPlayers);
     clearLine();
     if(numOfPlayers > 6 || numOfPlayers < 2){
         printf("Invalid input please try again.\n");
     }
-  }while(numOfPlayers > 6 || numOfPlayers < 2);
+  } while(numOfPlayers > 6 || numOfPlayers < 2);
+   
+  for(size_t i = 0; i < numOfPlayers; i++){
+      printf("Enter player %d name.\n", i+1);
+      // Scanning up to new line line character
+      scanf("%19[^\n]s", players[i].name);
+      clearLine();
+      printf("Which colour token does player %d want?(R=Red, G=Green, B=Blue, Y=Yellow, P=Pink, O=Orange)", i+1);
+      
+      do {
+        validColourInput = true;
+        scanf("%c", &playerColour);
+        clearLine();
+        switch(playerColour){
+            case 'R':
+                players[i].playerColour = RED;
+                break;
+            case 'G':
+                players[i].playerColour = GREEN;
+                break;
+            case 'B':
+                players[i].playerColour = BLUE;
+                break;
+            case 'Y':
+                players[i].playerColour = YELLOW;
+                break;
+            case 'P':
+                players[i].playerColour = PINK;
+                break;
+            case 'O':
+                players[i].playerColour = ORANGE;
+                break;
+            default:
+                printf("Invalid Input please try again\n");
+                validColourInput = false;
+            }
+        for(size_t j = 0; j < i;j++){
+            if(players[i].playerColour == players[j].playerColour){
+                printf("Colour has already been selected please try again\n");
+                validColourInput = false;
+                break;
+            }
+        }
+      } while(validColourInput != true);
+        
+    }
 }
 
 /*Function to clear the stdin buffer in case of overflow chars after recieving input*/

@@ -18,7 +18,7 @@ enum stype{
 // Colours of tokens
 enum colour {
     RED, BLUE, GREEN, YELLOW, PINK, ORANGE
-};
+}colour;
 
 
 // Defines a token.
@@ -41,9 +41,13 @@ typedef struct player{
     char name[20];
     //Players token colour
     enum colour playerColour;
+<<<<<<< HEAD
 
     unsigned int winCounter;
 }player;
+=======
+}player; 
+>>>>>>> 2af1cbc4cc690f40ff89621c38df39bc0811b9e2
 
 
 #ifdef __cplusplus

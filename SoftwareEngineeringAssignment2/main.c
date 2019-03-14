@@ -26,8 +26,13 @@ int main(void){
   player players[6];
   square board[NUM_ROWS][NUM_COLUMNS];
 
+<<<<<<< HEAD
   int numPlayers = gameInput(players);
   initializeBoard(board);
+=======
+  unsigned int numPlayers = gameInput(players);
+  initialize_board(board);
+>>>>>>> 2af1cbc4cc690f40ff89621c38df39bc0811b9e2
 
   printBoard(board);
 
