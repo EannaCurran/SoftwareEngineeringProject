@@ -17,7 +17,7 @@
 #define NUM_COLUMNS 9
 
 
-void initialize_board(struct square board[][NUM_COLUMNS]);
+void initializeBoard(struct square board[][NUM_COLUMNS]);
 
 
 #endif /* GAMEINITIALISATION_H */

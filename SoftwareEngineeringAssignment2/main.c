@@ -27,7 +27,7 @@ int main(void){
   square board[NUM_ROWS][NUM_COLUMNS];
 
   int numPlayers = gameInput(players);
-  initialize_board(board);
+  initializeBoard(board);
 
   printBoard(board);
 

@@ -16,9 +16,9 @@
 #include <stdbool.h>
 #include <stddef.h>
 #include "defineAssignment2.h"
- 
 
-void initialize_board(struct square board[][NUM_COLUMNS]){
+
+void initializeBoard(struct square board[][NUM_COLUMNS]){
 
     for (int i =0; i< NUM_ROWS; i++){
 
@@ -37,4 +37,26 @@ void initialize_board(struct square board[][NUM_COLUMNS]){
         }
     }
     return;
+}
+
+void boardSetup(struct square board[][NUM_COLUMNS], struct player player[], int numPlayers) {
+
+unsigned int cloumn1Positions[6] = {0, 1, 2, 3, 4, 5};
+
+  for (size_t i = 0; i < 4; i++) {
+    for (size_t j = 0; j < numPlayers; j++) {
+      printf("Player %s please choce wher to place your token %d in column\n",players[j].name );
+    }
+  }
+}
+
+void validStartingPosition(struct square board[][NUM_COLUMNS], struct player player[], int numPlayers) {
+  for (size_t i = 0; i < 5; i++) {
+    index = i;
+    for (size_t j = i+1; j < 6; j++) {
+      if (board[index][0]) {
+        /* code */
+      }
+    }
+  }
 }

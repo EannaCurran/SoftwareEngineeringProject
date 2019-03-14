@@ -29,10 +29,9 @@ char printToken(token *t){
 
 void printBoard(square board[][NUM_COLUMNS]){
     printf("                THE BOARD\n");
+    printLine();
     for(int i =0; i < NUM_ROWS; i++){
 
-        //prints an horizontal line
-        printLine();
 
         //prints the row number
         printf(" %d ", i+1);
@@ -60,11 +59,11 @@ void printBoard(square board[][NUM_COLUMNS]){
                   c[0] = ' ';
                   c[2] = ' ';
                 }
-        
-            printf("|%s ", c);
+
+            printf("|%s", c);
     }
         printf ("|\n");
-    
+
     printLine();
     //prints the number of the columns at the end of the board
     }

@@ -17,10 +17,10 @@
 #include <stddef.h>
 #include "defineAssignment2.h"
 
-// Function to receive user input 
+// Function to receive user input
 int gameInput(struct player players[6]){
   int numOfPlayers;
-  
+
   printf("Welcome to Igel Argern\n");
   printf("Enter the number of players you want to play (2 - 6 players only:\n");
   do{
