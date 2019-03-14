@@ -14,6 +14,7 @@
 
 #include "defineAssignment2.h"
 #include "gamePrint.h"
+#include "stackFunctions.h"
 
 
 char printToken(token *t){
@@ -41,8 +42,8 @@ void printBoard(square board[][NUM_COLUMNS]){
         //c is assigned the initial of the color of the token that occupies the square
         for (int j = 0; j < NUM_COLUMNS; j++){
 
-            if(board[i][j].stack != NULL){
-                c[1] = printToken(board[i][j].stack);
+            if(!isEmpty(board[i][j])){
+                c[1] = printToken(&board[i][j].stack[board[i][j].top]);
             }
             else{
               c[1] = ' ';

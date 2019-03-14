@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-/* 
+/*
  * File:   stackFunctions.h
  * Author: John
  *
@@ -13,5 +13,18 @@
 
 #ifndef STACKFUNCTIONS_H
 #define STACKFUNCTIONS_H
+
+#include <stdbool.h>
+
+void push(char valuePushed, struct square *boardPosition);
+
+void pop(struct square *boardPosition);
+
+char top(struct square boardPosition);
+
+bool isEmpty(struct square boardPosition);
+
+
+
 
 #endif /* STACKFUNCTIONS_H */

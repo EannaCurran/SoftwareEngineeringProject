@@ -17,22 +17,15 @@
 #include <stddef.h>
 #include "defineAssignment2.h"
 
-<<<<<<< HEAD
 // Function to receive user input
-int gameInput(struct player players[6]){
-  int numOfPlayers;
-
-=======
-// Function to receive user input 
 int gameInput(struct player players[]){
   int numOfPlayers;
   char playerColour;
   bool validColourInput = true;
-  
->>>>>>> 2af1cbc4cc690f40ff89621c38df39bc0811b9e2
+
   printf("Welcome to Igel Argern\n");
   printf("Enter the number of players you want to play (2 - 6 players only).\n");
-  
+
   do {
     scanf("%d", &numOfPlayers);
     clearLine();
@@ -40,14 +33,14 @@ int gameInput(struct player players[]){
         printf("Invalid input please try again.\n");
     }
   } while(numOfPlayers > 6 || numOfPlayers < 2);
-   
+
   for(size_t i = 0; i < numOfPlayers; i++){
       printf("Enter player %d name.\n", i+1);
       // Scanning up to new line line character
       scanf("%19[^\n]s", players[i].name);
       clearLine();
-      printf("Which colour token does player %d want?(R=Red, G=Green, B=Blue, Y=Yellow, P=Pink, O=Orange)", i+1);
-      
+      printf("Which colour token does player %d want?\n(R=Red, G=Green, B=Blue, Y=Yellow, P=Pink, O=Orange)\n", i+1);
+
       do {
         validColourInput = true;
         scanf("%c", &playerColour);
@@ -83,7 +76,7 @@ int gameInput(struct player players[]){
             }
         }
       } while(validColourInput != true);
-        
+
     }
 }
 

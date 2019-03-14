@@ -1,14 +1,43 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+#include <stdio.h>
+#include <stdbool.h>
 
-/* 
- * File:   stackFunctions.c
- * Author: John
- * 
- * Created on 14 March 2019, 16:39
- */
-
+#include "defineAssignment2.h"
 #include "stackFunctions.h"
+
+void push(char valuePushed, struct square *boardPosition){
+
+if (*boardPosition->top < 24) {
+  *boardPosition->top++;
+  *boardPosition->stack[*boardPosition->top] = valuePushed;
+}
+  else{
+    printf("ERROR stack is full\n" );
+  }
+
+  return;
+}
+
+void pop(struct square *boardPosition){
+  if (!isEmpty(*boardPosition) {
+    *boardPosition->top--;
+  }
+  else{
+    printf("ERROR Stack is empty!\n");
+  }
+  return;
+}
+
+char top(struct square boardPosition){
+  if (!isEmpty(boardPosition)) {
+    return boardPosition.stack[boardPosition.top];
+  }
+  else {return ' ';}
+
+}
+
+bool isEmpty(struct square boardPosition){
+  if(boardPosition.top == -1){
+      return true;
+    }
+   else {return false;}
+}

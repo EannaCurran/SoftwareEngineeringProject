@@ -24,6 +24,7 @@ void initializeBoard(struct square board[][NUM_COLUMNS]){
 
         for(int j =0; j < NUM_COLUMNS; j++){
 
+
             //creates an obstacle square at positions (0,3), (1,6), (2,4), (3,5), (4,2) and (5,7)
             if((i == 0 && j==3) || (i == 1 && j == 6) || (i ==2 && j ==4) || (i == 3 && j ==5) || (i==4 && j==2) || (i==5 && j==7)){
                 board[i][j].type = OBSTACLE;
@@ -33,28 +34,31 @@ void initializeBoard(struct square board[][NUM_COLUMNS]){
                 board[i][j].type = NORMAL;
             }
 
-            board[i][j].stack = NULL;
+            //board[i][j].stack = NULL;
+            board[i][j].top = -1;
         }
     }
     return;
 }
 
-void boardSetup(struct square board[][NUM_COLUMNS], struct player player[], int numPlayers) {
+void boardSetup(struct square board[][NUM_COLUMNS], struct player players[], int numPlayers) {
 
 unsigned int cloumn1Positions[6] = {0, 1, 2, 3, 4, 5};
 
   for (size_t i = 0; i < 4; i++) {
     for (size_t j = 0; j < numPlayers; j++) {
-      printf("Player %s please choce wher to place your token %d in column\n",players[j].name );
+      printf("Player %s please choose where to place your token %zd in column\n", players[j].name , i+1 );
     }
   }
 }
 
 void validStartingPosition(struct square board[][NUM_COLUMNS], struct player player[], int numPlayers) {
-  for (size_t i = 0; i < 5; i++) {
+    int index;
+
+    for (size_t i = 0; i < 5; i++) {
     index = i;
     for (size_t j = i+1; j < 6; j++) {
-      if (board[index][0]) {
+      if (true) {
         /* code */
       }
     }
