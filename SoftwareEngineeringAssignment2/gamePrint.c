@@ -17,16 +17,6 @@
 #include "stackFunctions.h"
 
 
-char printToken(token *t){
-    if((*t).colourToken == PINK) return 'P';
-    if((*t).colourToken == RED) return 'R';
-    if((*t).colourToken == BLUE) return 'B';
-    if((*t).colourToken == GREEN) return 'G';
-    if((*t).colourToken == ORANGE) return 'O';
-    if((*t).colourToken == YELLOW) return 'Y';
-    return '\0';
-}
-
 
 void printBoard(square board[][NUM_COLUMNS]){
     printf("                THE BOARD\n");

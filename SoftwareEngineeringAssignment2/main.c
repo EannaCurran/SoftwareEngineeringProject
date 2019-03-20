@@ -33,6 +33,22 @@ int main(void){
 
   printBoard(board);
 
+  //Testing stack
+  char testChar;
+  do {
+    printf("Please enter char to be pushed\n" );
+    scanf("%c",&testChar );
+  } while(!push(testChar, &board[0][0]));
+
+printBoard(board);
+
+printf("%c\n",top(board[0][0]));
+
+pop(&board[0][0]);
+printBoard(board);
+
+
+
 
   return 0;
 }

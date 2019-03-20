@@ -16,15 +16,17 @@
 
 #include <stdbool.h>
 
-void push(char valuePushed, struct square *boardPosition);
+bool push(char valuePushed, struct square *boardPosition);
 
 void pop(struct square *boardPosition);
 
-char top(struct square boardPosition);
+char top(square boardPosition);
 
 bool isEmpty(struct square boardPosition);
 
+char printToken(token *t);
 
+bool charToToken(char valueToConvert, token *t);
 
 
 #endif /* STACKFUNCTIONS_H */
