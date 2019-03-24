@@ -59,18 +59,23 @@ void validStartingPosition(struct square board[][NUM_COLUMNS], struct player pla
   for (size_t i = 0; i < 5; i++) {
     index = i;
     for (size_t j = i+1; j < 6; j++) {
-      if (board[index][0].top > board[j][0].top) {
+        
+        //printf("%u=%d  >  %u=%d\n",columnPositions[index],board[columnPositions[index]][0].top,columnPositions[j], board[columnPositions[j]][0].top);
+      if (board[columnPositions[index]][0].top > board[columnPositions[j]][0].top) {
         index = j;
+        
       }
-      temp = board[index][0].top;
-      board[index][0].top = board[i][0].top;
-      board[i][0].top = temp;
+      
+      
     }
+    temp = columnPositions[index];
+      columnPositions[index] = columnPositions[i];
+      columnPositions[i] = temp;
+      
+      
   }
-
-
-for (size_t i = 0; i < 6; i++) {
-  printf("%ud\t%d\n", columnPositions[i], board[i][0].top);
-}
-
+    printf("\n\n");
+      for (size_t i = 0; i < 6; i++) {
+        printf("%u\t%d\n", columnPositions[i], board[columnPositions[i]][0].top);
+      }
 }

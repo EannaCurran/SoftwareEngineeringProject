@@ -12,6 +12,8 @@ bool pop(struct square *boardPosition);
 
 char top(square boardPosition);
 
+colour topColour(square boardPosition);
+
 bool isEmpty(struct square boardPosition);
 
 char printToken(token *t);

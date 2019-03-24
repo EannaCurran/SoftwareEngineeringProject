@@ -52,6 +52,15 @@ char top(square boardPosition){
   else return ' ';
 }
 
+colour topColour(square boardPosition){
+  /*If the stack is not empty*/
+  if (!isEmpty(boardPosition)) {
+    /*Calls the printToken function to convert the colour of the token to char then returns that char*/
+    return boardPosition.stack[boardPosition.top].colourToken;
+  }
+  
+}
+
 /*The isEmpty function checks if the stack of a square is empty
 return true if empty*/
 bool isEmpty(struct square boardPosition){
