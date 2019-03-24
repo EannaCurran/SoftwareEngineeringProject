@@ -44,10 +44,10 @@ int main(void){
 
 
   board[0][0].top = 1;
-  board[1][0].top = 7;
+  board[1][0].top = -1;
   board[2][0].top = 3;
-  board[3][0].top = 4;
-  board[4][0].top = 6;
+  board[3][0].top = 2;
+  board[4][0].top = 1;
   board[5][0].top = 2;
 
   validStartingPosition(board, players, numPlayers);
