@@ -32,8 +32,9 @@ int main(void){
   initializeBoard(board);
 
   printBoard(board);
+  playGame();
 
-  //Testing stack
+  /*Testing stack
   char testChar;
   do {
     printf("Please enter char to be pushed\n" );
@@ -43,12 +44,10 @@ int main(void){
 printBoard(board);
 
 printf("%c\n",top(board[0][0]));
-
-pop(&board[0][0]);
 printBoard(board);
 
 
 
-
+   * */
   return 0;
 }

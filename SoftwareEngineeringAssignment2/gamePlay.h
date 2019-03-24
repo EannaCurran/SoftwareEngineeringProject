@@ -15,3 +15,5 @@
 #define GAMEPLAY_H
 
 #endif /* GAMEPLAY_H */
+
+void playGame();

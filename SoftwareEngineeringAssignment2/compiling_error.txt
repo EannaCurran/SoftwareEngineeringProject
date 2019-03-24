@@ -1,2 +1,9 @@
-c:/mingw/bin/../lib/gcc/mingw32/8.2.0/../../../../mingw32/bin/ld.exe: C:\Users\ANNA~1\AppData\Local\Temp\ccqZZ5II.o:main.c:(.text+0x12): undefined reference to `gameInput'
+c:/mingw/bin/../lib/gcc/mingw32/8.2.0/../../../../mingw32/bin/ld.exe: C:\Users\ANNA~1\AppData\Local\Temp\ccOOHPTF.o:main.c:(.text+0x25): undefined reference to `gameInput'
+c:/mingw/bin/../lib/gcc/mingw32/8.2.0/../../../../mingw32/bin/ld.exe: C:\Users\ANNA~1\AppData\Local\Temp\ccOOHPTF.o:main.c:(.text+0x38): undefined reference to `initializeBoard'
+c:/mingw/bin/../lib/gcc/mingw32/8.2.0/../../../../mingw32/bin/ld.exe: C:\Users\ANNA~1\AppData\Local\Temp\ccOOHPTF.o:main.c:(.text+0x44): undefined reference to `printBoard'
+c:/mingw/bin/../lib/gcc/mingw32/8.2.0/../../../../mingw32/bin/ld.exe: C:\Users\ANNA~1\AppData\Local\Temp\ccOOHPTF.o:main.c:(.text+0x7c): undefined reference to `push'
+c:/mingw/bin/../lib/gcc/mingw32/8.2.0/../../../../mingw32/bin/ld.exe: C:\Users\ANNA~1\AppData\Local\Temp\ccOOHPTF.o:main.c:(.text+0x8f): undefined reference to `printBoard'
+c:/mingw/bin/../lib/gcc/mingw32/8.2.0/../../../../mingw32/bin/ld.exe: C:\Users\ANNA~1\AppData\Local\Temp\ccOOHPTF.o:main.c:(.text+0xa7): undefined reference to `top'
+c:/mingw/bin/../lib/gcc/mingw32/8.2.0/../../../../mingw32/bin/ld.exe: C:\Users\ANNA~1\AppData\Local\Temp\ccOOHPTF.o:main.c:(.text+0xc6): undefined reference to `pop'
+c:/mingw/bin/../lib/gcc/mingw32/8.2.0/../../../../mingw32/bin/ld.exe: C:\Users\ANNA~1\AppData\Local\Temp\ccOOHPTF.o:main.c:(.text+0xd2): undefined reference to `printBoard'
 collect2.exe: error: ld returned 1 exit status

@@ -15,7 +15,9 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <stddef.h>
+
 #include "defineAssignment2.h"
+#include "gameInput.h"
 
 // Function to receive user input
 int gameInput(struct player players[]){
@@ -78,6 +80,7 @@ int gameInput(struct player players[]){
       } while(validColourInput != true);
 
     }
+    return numOfPlayers;
 }
 
 /*Function to clear the stdin buffer in case of overflow chars after recieving input*/

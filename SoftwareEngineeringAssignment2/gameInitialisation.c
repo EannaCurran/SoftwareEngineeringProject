@@ -47,7 +47,7 @@ unsigned int cloumn1Positions[6] = {0, 1, 2, 3, 4, 5};
 
   for (size_t i = 0; i < 4; i++) {
     for (size_t j = 0; j < numPlayers; j++) {
-      printf("Player %s please choose where to place your token %zd in column\n", players[j].name , i+1 );
+      printf("Player %s please choose where to place your token %d in column\n", players[j].name , i+1 );
     }
   }
 }
