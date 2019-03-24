@@ -17,19 +17,37 @@
 #include <stddef.h>
 
 #include "defineAssignment2.h"
+#include "stackFunctions.h"
 #include "gameInput.h"
 #include "gameInitialisation.h"
 #include "gamePrint.h"
 #include "gamePlay.h"
+
 
 int main(void){
   player players[6];
   square board[NUM_ROWS][NUM_COLUMNS];
 
   unsigned int numPlayers = gameInput(players);
-  initialize_board(board);
+  initializeBoard(board);
 
   printBoard(board);
+
+  //Testing stack
+  char testChar;
+  do {
+    printf("Please enter char to be pushed\n" );
+    scanf("%c",&testChar );
+  } while(!push(testChar, &board[0][0]));
+
+printBoard(board);
+
+printf("%c\n",top(board[0][0]));
+
+pop(&board[0][0]);
+printBoard(board);
+
+
 
 
   return 0;

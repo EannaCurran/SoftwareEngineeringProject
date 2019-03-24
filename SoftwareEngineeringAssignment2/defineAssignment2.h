@@ -1,4 +1,4 @@
-// File containing definitions for variables 
+// File containing definitions for variables
 // Written by - John O'Donnell and Eanna Curran
 
 #ifndef DEFINEASSIGNMENT2_H
@@ -12,7 +12,7 @@
 
 // Types of squares
 enum stype{
-    NORMAL, OBSTACLE 
+    NORMAL, OBSTACLE
   };
 
 // Colours of tokens
@@ -21,10 +21,10 @@ enum colour {
 }colour;
 
 
-// Defines a token. 
+// Defines a token.
 // Note each token can be associated with a color
 typedef struct token{
-   enum colour colourToken;    
+   enum colour colourToken;
 }token;
 
 // Defines a square of the board.
@@ -32,7 +32,9 @@ typedef struct square{
     // A square can be a NORMAL or an OBSTACLE square
      enum stype type;
      // the stack of tokens that can be placed on the board square
-     token * stack;      
+     token stack[24];
+
+     int top;
 }square;
 
 // Defines each players information
@@ -41,7 +43,9 @@ typedef struct player{
     char name[20];
     //Players token colour
     enum colour playerColour;
-}player; 
+
+    unsigned int winCounter;
+}player;
 
 
 #ifdef __cplusplus
@@ -56,4 +60,3 @@ extern "C" {
 #endif
 
 #endif /* DEFINEASSIGNMENT2_H */
-

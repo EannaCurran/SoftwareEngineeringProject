@@ -39,7 +39,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/gameInput.o \
 	${OBJECTDIR}/gamePlay.o \
 	${OBJECTDIR}/gamePrint.o \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/stackFunctions.o
 
 
 # C Compiler Flags
@@ -66,30 +67,35 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/softwareengineeringassignment2.exe: $
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/softwareengineeringassignment2 ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/gameInitialisation.o: gameInitialisation.c 
+${OBJECTDIR}/gameInitialisation.o: gameInitialisation.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gameInitialisation.o gameInitialisation.c
 
-${OBJECTDIR}/gameInput.o: gameInput.c 
+${OBJECTDIR}/gameInput.o: gameInput.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gameInput.o gameInput.c
 
-${OBJECTDIR}/gamePlay.o: gamePlay.c 
+${OBJECTDIR}/gamePlay.o: gamePlay.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gamePlay.o gamePlay.c
 
-${OBJECTDIR}/gamePrint.o: gamePrint.c 
+${OBJECTDIR}/gamePrint.o: gamePrint.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gamePrint.o gamePrint.c
 
-${OBJECTDIR}/main.o: main.c 
+${OBJECTDIR}/main.o: main.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
+
+${OBJECTDIR}/stackFunctions.o: stackFunctions.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/stackFunctions.o stackFunctions.c
 
 # Subprojects
 .build-subprojects:
@@ -97,7 +103,6 @@ ${OBJECTDIR}/main.o: main.c
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/softwareengineeringassignment2.exe
 
 # Subprojects
 .clean-subprojects:
