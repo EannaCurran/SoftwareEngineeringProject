@@ -18,7 +18,7 @@
 int gameInput(struct player players[]);
 
 
-void clearLine();
+void clearLine(void);
 
 
 #endif /* GAMEINPUT_H */

@@ -81,7 +81,7 @@ int gameInput(struct player players[]){
 }
 
 /*Function to clear the stdin buffer in case of overflow chars after recieving input*/
-void clearLine(){
+void clearLine(void){
   /*Variables*/
   int temp;
 
