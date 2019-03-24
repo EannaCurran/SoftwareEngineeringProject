@@ -12,50 +12,47 @@
 
 // Types of squares
 enum stype{
-    NORMAL, OBSTACLE
-  };
+  NORMAL, OBSTACLE
+};
 
 // Colours of tokens
-enum colour {
-    RED, BLUE, GREEN, YELLOW, PINK, ORANGE
+typedef enum colour {
+  RED, BLUE, GREEN, YELLOW, PINK, ORANGE
 }colour;
 
 
 // Defines a token.
-// Note each token can be associated with a color
+// Each token can be associated with a color stored as an enum
 typedef struct token{
-   enum colour colourToken;
+  enum colour colourToken;
 }token;
 
-// Defines a square of the board.
+// Defines a square on the board.
 typedef struct square{
-    // A square can be a NORMAL or an OBSTACLE square
-     enum stype type;
-     // the stack of tokens that can be placed on the board square
-     token stack[24];
-
-     int top;
+  // A square can be a NORMAL or an OBSTACLE square stored as an enum
+  enum stype type;
+  // the stack of tokens that can be placed on the board square
+  token stack[24];
+  //top is a int storing the top position of the stack
+  int top;
 }square;
 
 // Defines each players information
 typedef struct player{
-    // Name of player
-    char name[20];
-    //Players token colour
-    enum colour playerColour;
-
-    unsigned int winCounter;
+  // Name of player
+  char name[20];
+  //Players token colour
+  enum colour playerColour;
+  //Counter for number of the player's conters across the finish line.
+  unsigned int winCounter;
 }player;
 
 
 #ifdef __cplusplus
 extern "C" {
-#endif
+  #endif
 
-
-
-
-#ifdef __cplusplus
+  #ifdef __cplusplus
 }
 #endif
 

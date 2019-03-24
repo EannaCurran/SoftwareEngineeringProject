@@ -53,14 +53,24 @@ unsigned int cloumn1Positions[6] = {0, 1, 2, 3, 4, 5};
 }
 
 void validStartingPosition(struct square board[][NUM_COLUMNS], struct player player[], int numPlayers) {
-    int index;
+  unsigned int temp, columnPositions[6] = {0,1,2,3,4,5};
+  int index;
 
-    for (size_t i = 0; i < 5; i++) {
+  for (size_t i = 0; i < 5; i++) {
     index = i;
     for (size_t j = i+1; j < 6; j++) {
-      if (true) {
-        /* code */
+      if (board[index][0].top > board[j][0].top) {
+        index = j;
       }
+      temp = board[index][0].top;
+      board[index][0].top = board[i][0].top;
+      board[i][0].top = temp;
     }
   }
+
+
+for (size_t i = 0; i < 6; i++) {
+  printf("%ud\t%d\n", columnPositions[i], board[i][0].top);
+}
+
 }

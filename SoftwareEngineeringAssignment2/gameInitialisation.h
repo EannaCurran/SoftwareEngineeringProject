@@ -19,5 +19,7 @@
 
 void initializeBoard(struct square board[][NUM_COLUMNS]);
 
+void validStartingPosition(struct square board[][NUM_COLUMNS], struct player player[], int numPlayers);
+
 
 #endif /* GAMEINITIALISATION_H */
