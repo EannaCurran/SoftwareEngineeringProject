@@ -11,11 +11,31 @@
  * Created on 11 March 2019, 16:18
  */
 
-#include "gamePlay.h"
-#include "defineAssignment2.h"
 #include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <time.h>
+
+#include "defineAssignment2.h"
+#include "stackFunctions.h"
 
 
-void playGame() {
-    printf("workin");
+void playGame(unsigned int numPlayers, struct square board[][NUM_COLUMNS], struct player players[]) {
+    
+    bool checkForWin = false;
+    int dice;
+    
+    while(checkForWin == false){
+        for(int i = 0; i < numPlayers; i++){
+            printf("Player %d turn\n", i+1);
+            dice = diceRoll();
+            printf("Player %d rolled %d\n", i+1, dice);
+        }
+        checkForWin = true;
+    }
+}
+
+int diceRoll(){
+    srand(time(NULL));
+    return (rand() % 5) + 1;
 }

@@ -29,46 +29,6 @@ int main(void){
 
   /*Calls the printBoard function to print the board in its starting state*/
   printBoard(board);
-  playGame();
-
-<<<<<<< HEAD
-  /*Testing stack
-  char testChar;
-  do {
-    printf("Please enter char to be pushed\n" );
-    scanf("%c",&testChar );
-  } while(!push(testChar, &board[0][0]));
-=======
->>>>>>> 22094772b0db5dbb46e05882e02c65e5be931c5e
-
-
-<<<<<<< HEAD
-printf("%c\n",top(board[0][0]));
-printBoard(board);
-=======
-  //Testing stack
-  while(!push(YELLOW, &board[0][0]));
-
-  printBoard(board);
-
-  printf("%c\n",top(board[0][0]));
->>>>>>> 22094772b0db5dbb46e05882e02c65e5be931c5e
-
-  pop(&board[0][0]);
-  printBoard(board);
-
-
-<<<<<<< HEAD
-   * */
-=======
-  board[0][0].top = 1;
-  board[1][0].top = 7;
-  board[2][0].top = 3;
-  board[3][0].top = 4;
-  board[4][0].top = 6;
-  board[5][0].top = 2;
-
-  validStartingPosition(board, players, numPlayers);
->>>>>>> 22094772b0db5dbb46e05882e02c65e5be931c5e
+  playGame(numPlayers, board);
   return 0;
 }

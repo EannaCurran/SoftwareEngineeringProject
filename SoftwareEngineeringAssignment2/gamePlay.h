@@ -15,5 +15,8 @@
 #define GAMEPLAY_H
 
 #endif /* GAMEPLAY_H */
+#define NUM_COLUMNS 9
 
-void playGame();
+void playGame(unsigned int numPlayers, struct square board[][NUM_COLUMNS]);
+
+int diceRoll();
