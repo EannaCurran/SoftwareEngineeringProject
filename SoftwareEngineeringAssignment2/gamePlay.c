@@ -20,6 +20,7 @@
 #include "stackFunctions.h"
 
 
+
 void playGame(unsigned int numPlayers, struct square board[][NUM_COLUMNS], struct player players[]) {
 
     bool checkForWin = false, directionCheck;
@@ -68,4 +69,5 @@ int diceRoll(){
 
     srand(time(NULL));
     return (rand() % 6);
+
 }
