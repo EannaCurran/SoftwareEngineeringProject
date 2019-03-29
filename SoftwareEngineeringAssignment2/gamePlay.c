@@ -39,7 +39,7 @@ void playGame(unsigned int numPlayers, struct square board[][NUM_COLUMNS], struc
                     printf("Not your counter please try again\n");
                 }
             } while(1 != 1);
-            
+
             printf("Do you want to move your token up or down?(U for up, D for Down)\n");
             do{
                 directionCheck = true;
@@ -65,7 +65,7 @@ void playGame(unsigned int numPlayers, struct square board[][NUM_COLUMNS], struc
 }
 
 int diceRoll(){
-    
+
     srand(time(NULL));
     return (rand() % 5) + 1;
 }

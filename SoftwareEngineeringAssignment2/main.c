@@ -29,6 +29,7 @@ int main(void){
 
   /*Calls the printBoard function to print the board in its starting state*/
   printBoard(board);
+<<<<<<< HEAD
 
   boardSetup(board, players, numPlayers);
 
@@ -38,5 +39,14 @@ int main(void){
 
 
 >>>>>>> 5e37adc3b85a7c36e7f99db97519edc700c8e44c
+=======
+
+  playGame(numPlayers, board, players);
+
+  boardSetup(board, players, numPlayers);
+
+  printBoard(board);
+
+>>>>>>> 00d2fcf9cfa8f8848d8846ff1251b2da1e046a66
   return 0;
 }
