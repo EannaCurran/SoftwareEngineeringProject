@@ -13,9 +13,9 @@
 
 #ifndef GAMEINPUT_H
 #define GAMEINPUT_H
+#include "defineAssignment2.h"
 
-
-int gameInput(struct player players[]);
+int gameInput(player players[]);
 
 
 void clearLine(void);

@@ -29,6 +29,42 @@ int main(void){
 
   /*Calls the printBoard function to print the board in its starting state*/
   printBoard(board);
+<<<<<<< HEAD
   playGame(numPlayers, board, players);
+=======
+
+  boardSetup(board, players, numPlayers);
+
+  printBoard(board);
+
+  //Testing stack
+  /*while(!push(YELLOW, &board[0][0]));
+
+  printBoard(board);
+
+  printf("%c\n",top(board[0][0]));
+
+  pop(&board[0][0]);
+  printBoard(board);
+
+
+  board[0][0].top = 1;
+  board[1][0].top = 1;
+  board[2][0].top = 3;
+  board[3][0].top = 2;
+  board[4][0].top = 1;
+  board[5][0].top = 2;
+
+  board[0][0].stack[board[0][0].top].colourToken = RED;
+  board[1][0].stack[board[1][0].top].colourToken = YELLOW;
+  board[2][0].stack[board[2][0].top].colourToken = RED;
+  board[3][0].stack[board[3][0].top].colourToken = GREEN;
+  board[4][0].stack[board[4][0].top].colourToken = BLUE;
+  board[5][0].stack[board[5][0].top].colourToken = GREEN;
+
+  unsigned int columnPositions[6] = {0,1,2,3,4,5};
+
+  validStartingPosition(board, players[0], columnPositions);*/
+>>>>>>> 0a758243cfaece0ca243c23cf60133cccabc4f22
   return 0;
 }
