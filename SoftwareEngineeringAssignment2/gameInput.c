@@ -15,10 +15,11 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <stddef.h>
+#include "gameInput.h"
 #include "defineAssignment2.h"
 
 // Function to receive user input
-int gameInput(struct player players[]){
+int gameInput(player players[]){
   int numOfPlayers;
   char playerColour;
   bool validColourInput = true;
@@ -35,11 +36,11 @@ int gameInput(struct player players[]){
   } while(numOfPlayers > 6 || numOfPlayers < 2);
 
   for(size_t i = 0; i < numOfPlayers; i++){
-      printf("Enter player %d name.\n", i+1);
+      printf("\nEnter player %u name.\n", i+1);
       // Scanning up to new line line character
       scanf("%19[^\n]s", players[i].name);
       clearLine();
-      printf("Which colour token does player %d want?\n(R=Red, G=Green, B=Blue, Y=Yellow, P=Pink, O=Orange)\n", i+1);
+      printf("Which colour token does player %u want?\n(R=Red, G=Green, B=Blue, Y=Yellow, P=Pink, O=Orange)\n", i+1);
 
       do {
         validColourInput = true;
@@ -65,12 +66,12 @@ int gameInput(struct player players[]){
                 players[i].playerColour = ORANGE;
                 break;
             default:
-                printf("Invalid Input please try again\n");
+                printf("Invalid Input please try again!\n");
                 validColourInput = false;
             }
         for(size_t j = 0; j < i;j++){
             if(players[i].playerColour == players[j].playerColour){
-                printf("Colour has already been selected please try again\n");
+                printf("Colour has already been selected please try again!\n");
                 validColourInput = false;
                 break;
             }
