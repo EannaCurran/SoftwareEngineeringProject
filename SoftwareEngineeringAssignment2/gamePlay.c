@@ -18,6 +18,8 @@
 
 #include "defineAssignment2.h"
 #include "stackFunctions.h"
+#include "gameInitialisation.h"
+#include "gamePrint.h"
 
 
 
@@ -32,7 +34,7 @@ void playGame(unsigned int numPlayers, struct square board[][NUM_COLUMNS], struc
             printf("Player %d turn\n", i+1);
             dice = diceRoll();
             printf("Player %d rolled %d\n", i+1, dice);
-            printf("Enter the co-ordinate of which of your tokens you would like to move \n");
+            printf("Enter the co-ordinate of which of your tokens you would like to move:\n");
             do{
                 scanf("%d %d", &rowInput, &columnInput);
                 clearLine();

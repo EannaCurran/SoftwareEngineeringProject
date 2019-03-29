@@ -18,6 +18,7 @@ bool push(colour valuePushed, struct square *boardPosition){
     return true;
   }
 
+
   /*Else stack is full print error return false*/
   else{
     printf("ERROR stack is full\n" );
@@ -58,7 +59,7 @@ colour topColour(square boardPosition){
     /*Calls the printToken function to convert the colour of the token to char then returns that char*/
     return boardPosition.stack[boardPosition.top].colourToken;
   }
-  
+
 }
 
 /*The isEmpty function checks if the stack of a square is empty
