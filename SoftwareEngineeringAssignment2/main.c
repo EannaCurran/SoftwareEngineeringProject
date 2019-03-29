@@ -32,10 +32,11 @@ int main(void){
 
   boardSetup(board, players, numPlayers);
 
-  
+  playGame(numPlayers, board, players);
 
   printBoard(board);
 
 
+>>>>>>> 5e37adc3b85a7c36e7f99db97519edc700c8e44c
   return 0;
 }

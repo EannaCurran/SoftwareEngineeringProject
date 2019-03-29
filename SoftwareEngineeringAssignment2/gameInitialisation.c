@@ -52,6 +52,9 @@ void boardSetup(struct square board[][NUM_COLUMNS], struct player players[], int
 
   for (size_t i = 1; i <= 4; i++) {
     for (size_t j = 0; j < numPlayers; j++) {
+<<<<<<< HEAD
+      printf("Player %s please choose where to place your token %d in column\n", players[j].name , i+1 );
+=======
 
       numValidPossitions = validStartingPosition(board, players[j], column1Positions);
       do{
@@ -83,6 +86,7 @@ void boardSetup(struct square board[][NUM_COLUMNS], struct player players[], int
       }while(!push(players[j].playerColour, &board[selectedRow][0]));
 
       printBoard(board);
+>>>>>>> 0a758243cfaece0ca243c23cf60133cccabc4f22
     }
   }
 }

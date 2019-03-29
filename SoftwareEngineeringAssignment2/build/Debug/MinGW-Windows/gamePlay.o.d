@@ -1,3 +1,6 @@
-build/Debug/MinGW-Windows/gamePlay.o: gamePlay.c gamePlay.h
+build/Debug/MinGW-Windows/gamePlay.o: gamePlay.c defineAssignment2.h \
+ stackFunctions.h
 
-gamePlay.h:
+defineAssignment2.h:
+
+stackFunctions.h:
