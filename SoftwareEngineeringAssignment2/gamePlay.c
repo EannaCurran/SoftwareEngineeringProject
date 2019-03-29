@@ -67,7 +67,8 @@ void playGame(unsigned int numPlayers, struct square board[][NUM_COLUMNS], struc
 int diceRoll(){
 
     srand(time(NULL));
-    return (rand() % 5) + 1;
+    return (rand() % 6);
+    
 }
 
 void clearLine2(){
