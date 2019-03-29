@@ -67,17 +67,5 @@ void playGame(unsigned int numPlayers, struct square board[][NUM_COLUMNS], struc
 int diceRoll(){
 
     srand(time(NULL));
-    return (rand() % 5) + 1;
-}
-
-void clearLine2(){
-  /*Variables*/
-  int temp;
-
-  /*Do while loop to get chars from stdin and store them in temp till a new line*/
-  do{
-
-    temp = fgetc(stdin);
-
-  } while (temp != '\n' && temp != EOF);
+    return (rand() % 6);
 }
