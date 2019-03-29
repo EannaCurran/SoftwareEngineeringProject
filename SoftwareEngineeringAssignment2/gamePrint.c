@@ -15,6 +15,7 @@
 #include "defineAssignment2.h"
 #include "gamePrint.h"
 #include "stackFunctions.h"
+#include "gameInitialisation.h"
 
 
 

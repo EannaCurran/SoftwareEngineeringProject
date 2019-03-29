@@ -20,6 +20,7 @@
 #include "stackFunctions.h"
 
 
+
 void playGame(unsigned int numPlayers, struct square board[][NUM_COLUMNS], struct player players[]) {
 
     bool checkForWin = false, directionCheck;
@@ -34,7 +35,7 @@ void playGame(unsigned int numPlayers, struct square board[][NUM_COLUMNS], struc
             printf("Enter the co-ordinate of which of your tokens you would like to move \n");
             do{
                 scanf("%d %d", &rowInput, &columnInput);
-                clearLine2();
+                clearLine();
                 if(board[rowInput][columnInput].top != players[i].playerColour){
                     printf("Not your counter please try again\n");
                 }
@@ -44,7 +45,7 @@ void playGame(unsigned int numPlayers, struct square board[][NUM_COLUMNS], struc
             do{
                 directionCheck = true;
                 scanf("%c", &directionInput);
-                clearLine2();
+                clearLine();
                 if(directionInput != 68 && directionInput != 85){
                     printf("Invalid input please try again\n");
                     directionCheck = false;
@@ -68,17 +69,5 @@ int diceRoll(){
 
     srand(time(NULL));
     return (rand() % 6);
-    
-}
 
-void clearLine2(){
-  /*Variables*/
-  int temp;
-
-  /*Do while loop to get chars from stdin and store them in temp till a new line*/
-  do{
-
-    temp = fgetc(stdin);
-
-  } while (temp != '\n' && temp != EOF);
 }
