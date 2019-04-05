@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdbool.h>
 
 #include "defineAssignment2.h"
@@ -7,22 +8,19 @@
 
 /*The Push function takes a colour value to be pushed and a pointer square on the board and pushes the value to the top of the stack
 returns true if sucessful*/
-bool push(colour valuePushed, struct square *boardPosition){
-  /*If stack is not full*/
-  if (boardPosition->top < 24) {
-    /*Incroment top*/
-    boardPosition->top++;
-    /*Set top of stack to valuePushed*/
-    boardPosition->stack[boardPosition->top].colourToken = valuePushed;
-    /*return true*/
-    return true;
+void push(colour valuePushed, struct square *boardPosition){
+  token *tempPrtr = malloc(sizeof(token));
+
+  if (tempPrtr == Null) {
+    tempPrtr->nextToken = boardPosition->stack;
+    boardPosition->stack = tempPrtr;
+    tempPrtr->colourToken = valuePushed;
+    return;
   }
-
-
   /*Else stack is full print error return false*/
   else{
-    printf("ERROR stack is full\n" );
-    return false;
+    fprintf(stderr, "ERROR Not enough memory to add to stack!\nProgram closing.\n");
+    exit(EXIT_FAILURE);
   }
 }
 
@@ -31,8 +29,9 @@ returns true if sucessful*/
 bool pop(struct square *boardPosition){
   /*If stack is not empty*/
   if (!isEmpty(*boardPosition)) {
-    /*Decroment top*/
-    boardPosition->top--;
+    token tempPrtr = boardPosition->stack;
+    boardPosition->stack = *tempPrtr;
+    free(tempPrtr);
     return true;
   }
   /*Else the stack is empty print Error and return false*/
@@ -47,7 +46,7 @@ char top(square boardPosition){
   /*If the stack is not empty*/
   if (!isEmpty(boardPosition)) {
     /*Calls the printToken function to convert the colour of the token to char then returns that char*/
-    return printToken(&boardPosition.stack[boardPosition.top]);
+    return printToken(&boardPosition.stack->colourToken);
   }
   /*Else stack is empty so retun ' '*/
   else return ' ';
@@ -57,16 +56,15 @@ colour topColour(square boardPosition){
   /*If the stack is not empty*/
   if (!isEmpty(boardPosition)) {
     /*Calls the printToken function to convert the colour of the token to char then returns that char*/
-    return boardPosition.stack[boardPosition.top].colourToken;
+    return boardPosition.stack->colourToken;
   }
-
 }
 
 /*The isEmpty function checks if the stack of a square is empty
 return true if empty*/
 bool isEmpty(struct square boardPosition){
   /*If top == -1 then stack is empty return true*/
-  if(boardPosition.top == -1){
+  if(boardPosition.stack == Null){
     return true;
   }
   /*Else stack is not empty return false*/

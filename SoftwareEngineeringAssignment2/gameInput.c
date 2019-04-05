@@ -1,16 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/*
- * File:   gameInput.c
- * Author: John
- *
- * Created on 11 March 2019, 16:04
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -22,20 +9,26 @@
 
 // Function to receive user input
 int gameInput(player players[]){
+  /*Variables*/
   int numOfPlayers;
   char playerColour;
   bool validColourInput = true;
 
+  /*Prompt user to input number of users*/
   printf("Welcome to Igel Argern\n");
   printf("Enter the number of players you want to play (2 - 6 players only).\n");
 
+  /*Do while loop to scan in number of players*/
   do {
     scanf("%d", &numOfPlayers);
-    clearLine();
+    clearLine();/*Call clearLine to empty stdin buffer so not to have value run into next scanf*/
+
+    /*If the is an Invalid input of user print this information to user.*/
     if(numOfPlayers > 6 || numOfPlayers < 2){
         printf("Invalid input please try again.\n");
     }
-  } while(numOfPlayers > 6 || numOfPlayers < 2);
+
+  } while(numOfPlayers > 6 || numOfPlayers < 2);/*Loop if */
 
   for(size_t i = 0; i < numOfPlayers; i++){
       printf("\nEnter player %u name.\n", i+1);
