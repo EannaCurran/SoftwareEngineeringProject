@@ -112,7 +112,7 @@ int validStartingPosition(struct square board[][NUM_COLUMNS], struct player play
     validPositionCounter = i;
   }
 
- -A
+ 
   for (size_t i = 0; i <= validPositionCounter && validPositionCounter != -1; i++) {
     if ( !isEmpty( board[columnPositions[i]][0]) && board[columnPositions[i]][0].stack[board[columnPositions[i]][0].top].colourToken == player.playerColour) {
       temp = columnPositions[validPositionCounter];
