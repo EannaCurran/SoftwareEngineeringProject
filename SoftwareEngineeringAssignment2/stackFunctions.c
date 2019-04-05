@@ -48,7 +48,7 @@ char top(square boardPosition){
     /*Calls the printToken function to convert the colour of the token to char then returns that char*/
     return printToken(&boardPosition.stack->colourToken);
   }
-  /*Else stack is empty so retun ' '*/
+  /*Else stack is empty so retuRn ' '*/
   else return ' ';
 }
 
