@@ -34,20 +34,20 @@ void playGame(unsigned int numPlayers, struct square board[][NUM_COLUMNS], struc
     bool checkForWin = false, directionCheck = false, inputCheck = false, inputCheckRight = false, tokenFound;
     int dice, rowInput, columnInput, columnInputRight;
     char directionInput, upDownChoice;;
-    
+
     while(checkForWin == false){
         for(int i = 0; i < numPlayers; i++){
             printf("Player %d turn\n", i+1);
             dice = diceRoll();
             printf("Player %d rolled %d\n", i+1, dice);
-            
+
             do{
                 printf("Enter Y to move a token you own up or down, else enter N \n");
                 scanf("%c" ,&upDownChoice);
                 clearLine();
-            
+
             }while(upDownChoice != 'Y' && upDownChoice != 'N');
-            
+
             if(upDownChoice == 'Y'){
                 do{
                     do{
@@ -92,10 +92,10 @@ void playGame(unsigned int numPlayers, struct square board[][NUM_COLUMNS], struc
                 moveTokenUpOrDown(directionInput, board, columnInput, rowInput, players, i);
                 printBoard(board);
             }
-            
+
             dice--;
             tokenFound = checkToken(board, dice);
-            
+
             if(!tokenFound){
             do{
                 do{
@@ -104,13 +104,13 @@ void playGame(unsigned int numPlayers, struct square board[][NUM_COLUMNS], struc
                 scanf("%d", &columnInputRight);
                 clearLine();
                 }while((columnInputRight < 1 || columnInputRight > 8));
-                
+
                 columnInputRight--;
                 if(top(board[dice][columnInputRight]) == ' '){
                     printf("Invalid Input please try again.\n");
                     inputCheckRight = false;
                 }
-                
+
             } while(!inputCheckRight);
             moveTokenRight(board, dice, players, columnInputRight);
             printBoard(board);
@@ -120,7 +120,7 @@ void playGame(unsigned int numPlayers, struct square board[][NUM_COLUMNS], struc
             }
         }
         }
-    
+
     }
 
 int diceRoll(){
@@ -133,29 +133,29 @@ int diceRoll(){
 
 void moveTokenUpOrDown(char directionInput, struct square board[][NUM_COLUMNS], int columnInput, int rowInput, struct player players[], int i){
     int tokenDirection;
-    
+
     if(directionInput == 'U'){
         tokenDirection = -1;
     }
     else if(directionInput == 'D'){
         tokenDirection = 1;
     }
-    
+
     push(players[i].playerColour, &board[rowInput+ tokenDirection][columnInput]);
     pop(&board[rowInput][columnInput]);
 }
 
 void moveTokenRight(struct square board[][NUM_COLUMNS], int dice, struct player players[], int columnInputRight){
-    
+
     push(topColour(board[dice][columnInputRight]), &board[dice][columnInputRight + 1]);
     pop(&board[dice][columnInputRight]);
 }
 
 bool checkToken(struct square board[][NUM_COLUMNS], int dice){
-    
+
     bool tokenCheck = true;
     int i = 0;
-    
+
     for(i = 0; (i < NUM_COLUMNS) && (tokenCheck != false); i++){
         tokenCheck = isEmpty(board[dice][i]);
     }
