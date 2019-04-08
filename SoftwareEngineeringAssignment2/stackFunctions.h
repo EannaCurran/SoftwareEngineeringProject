@@ -6,7 +6,7 @@
 #include <stdbool.h>
 #include "defineAssignment2.h"
 
-bool push(colour valuePushed, struct square *boardPosition);
+void push(colour valuePushed, struct square *boardPosition);
 
 bool pop(struct square *boardPosition);
 

@@ -34,7 +34,7 @@ void printBoard(square board[][NUM_COLUMNS]){
         for (int j = 0; j < NUM_COLUMNS; j++){
 
             if(!isEmpty(board[i][j])){
-                c[1] = printToken(&board[i][j].stack[board[i][j].top]);
+                c[1] = printToken(board[i][j].stack);
             }
             else{
               c[1] = ' ';

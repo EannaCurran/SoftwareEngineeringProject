@@ -38,7 +38,8 @@ void initializeBoard(struct square board[][NUM_COLUMNS]){
         board[i][j].type = NORMAL;
       }
 
-      board[i][j].top = -1;
+      board[i][j].stack = NULL;
+      board[i][j].numStack = -1;
     }
   }
   return;
@@ -55,7 +56,7 @@ void boardSetup(struct square board[][NUM_COLUMNS], struct player players[], int
       printf("Player %s please choose where to place your token %d in column\n", players[j].name , i );
 
       numValidPossitions = validStartingPosition(board, players[j], column1Positions);
-      do{
+
         do{
           validPositionSelected = false;
 
@@ -81,7 +82,7 @@ void boardSetup(struct square board[][NUM_COLUMNS], struct player players[], int
           }
         }while(validPositionSelected != true);
 
-      }while(!push(players[j].playerColour, &board[selectedRow][0]));
+      push(players[j].playerColour, &board[selectedRow][0]);
 
       printBoard(board);
     }
@@ -96,7 +97,7 @@ int validStartingPosition(struct square board[][NUM_COLUMNS], struct player play
     index = i;
     for (size_t j = i+1; j < 6; j++) {
 
-      if (board[columnPositions[index]][0].top > board[columnPositions[j]][0].top) {
+      if (board[columnPositions[index]][0].numStack > board[columnPositions[j]][0].numStack) {
         index = j;
       }
     }
@@ -108,13 +109,13 @@ int validStartingPosition(struct square board[][NUM_COLUMNS], struct player play
   }
 
 
-  for (size_t i = 1; i < 6 && board[columnPositions[i]][0].top == board[columnPositions[i-1]][0].top; i++) {
+  for (size_t i = 1; i < 6 && board[columnPositions[i]][0].numStack == board[columnPositions[i-1]][0].numStack; i++) {
     validPositionCounter = i;
   }
 
- 
+
   for (size_t i = 0; i <= validPositionCounter && validPositionCounter != -1; i++) {
-    if ( !isEmpty( board[columnPositions[i]][0]) && board[columnPositions[i]][0].stack[board[columnPositions[i]][0].top].colourToken == player.playerColour) {
+    if ( !isEmpty( board[columnPositions[i]][0]) && board[columnPositions[i]][0].stack->colourToken == player.playerColour) {
       temp = columnPositions[validPositionCounter];
       columnPositions[validPositionCounter] = columnPositions[i];
       columnPositions[i] = temp;

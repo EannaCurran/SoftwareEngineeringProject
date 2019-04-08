@@ -11,10 +11,11 @@ returns true if sucessful*/
 void push(colour valuePushed, struct square *boardPosition){
   token *tempPrtr = malloc(sizeof(token));
 
-  if (tempPrtr == Null) {
+  if (tempPrtr != NULL) {
     tempPrtr->nextToken = boardPosition->stack;
     boardPosition->stack = tempPrtr;
     tempPrtr->colourToken = valuePushed;
+    boardPosition->numStack++;
     return;
   }
   /*Else stack is full print error return false*/
@@ -29,9 +30,10 @@ returns true if sucessful*/
 bool pop(struct square *boardPosition){
   /*If stack is not empty*/
   if (!isEmpty(*boardPosition)) {
-    token tempPrtr = boardPosition->stack;
-    boardPosition->stack = *tempPrtr;
+    token *tempPrtr = boardPosition->stack;
+    boardPosition->stack = tempPrtr->nextToken;
     free(tempPrtr);
+    boardPosition->numStack--;
     return true;
   }
   /*Else the stack is empty print Error and return false*/
@@ -46,7 +48,7 @@ char top(square boardPosition){
   /*If the stack is not empty*/
   if (!isEmpty(boardPosition)) {
     /*Calls the printToken function to convert the colour of the token to char then returns that char*/
-    return printToken(&boardPosition.stack->colourToken);
+    return printToken(boardPosition.stack);
   }
   /*Else stack is empty so retuRn ' '*/
   else return ' ';
@@ -64,7 +66,7 @@ colour topColour(square boardPosition){
 return true if empty*/
 bool isEmpty(struct square boardPosition){
   /*If top == -1 then stack is empty return true*/
-  if(boardPosition.stack == Null){
+  if(boardPosition.stack == NULL){
     return true;
   }
   /*Else stack is not empty return false*/

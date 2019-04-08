@@ -37,6 +37,8 @@ int gameInput(player players[]){
       clearLine();
       printf("Which colour token does player %u want?\n(R=Red, G=Green, B=Blue, Y=Yellow, P=Pink, O=Orange)\n", i+1);
 
+      players[i].winCounter = 0;
+
       do {
         validColourInput = true;
         scanf("%c", &playerColour);

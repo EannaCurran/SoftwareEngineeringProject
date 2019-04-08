@@ -34,6 +34,8 @@ typedef struct square{
   enum stype type;
   // the stack of tokens that can be placed on the board square
   token *stack;
+
+  int numStack;
 }square;
 
 // Defines each players information
