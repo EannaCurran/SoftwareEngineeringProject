@@ -1,9 +1,19 @@
-c:/mingw/bin/../lib/gcc/mingw32/8.2.0/../../../../mingw32/bin/ld.exe: C:\Users\ANNA~1\AppData\Local\Temp\ccOOHPTF.o:main.c:(.text+0x25): undefined reference to `gameInput'
-c:/mingw/bin/../lib/gcc/mingw32/8.2.0/../../../../mingw32/bin/ld.exe: C:\Users\ANNA~1\AppData\Local\Temp\ccOOHPTF.o:main.c:(.text+0x38): undefined reference to `initializeBoard'
-c:/mingw/bin/../lib/gcc/mingw32/8.2.0/../../../../mingw32/bin/ld.exe: C:\Users\ANNA~1\AppData\Local\Temp\ccOOHPTF.o:main.c:(.text+0x44): undefined reference to `printBoard'
-c:/mingw/bin/../lib/gcc/mingw32/8.2.0/../../../../mingw32/bin/ld.exe: C:\Users\ANNA~1\AppData\Local\Temp\ccOOHPTF.o:main.c:(.text+0x7c): undefined reference to `push'
-c:/mingw/bin/../lib/gcc/mingw32/8.2.0/../../../../mingw32/bin/ld.exe: C:\Users\ANNA~1\AppData\Local\Temp\ccOOHPTF.o:main.c:(.text+0x8f): undefined reference to `printBoard'
-c:/mingw/bin/../lib/gcc/mingw32/8.2.0/../../../../mingw32/bin/ld.exe: C:\Users\ANNA~1\AppData\Local\Temp\ccOOHPTF.o:main.c:(.text+0xa7): undefined reference to `top'
-c:/mingw/bin/../lib/gcc/mingw32/8.2.0/../../../../mingw32/bin/ld.exe: C:\Users\ANNA~1\AppData\Local\Temp\ccOOHPTF.o:main.c:(.text+0xc6): undefined reference to `pop'
-c:/mingw/bin/../lib/gcc/mingw32/8.2.0/../../../../mingw32/bin/ld.exe: C:\Users\ANNA~1\AppData\Local\Temp\ccOOHPTF.o:main.c:(.text+0xd2): undefined reference to `printBoard'
-collect2.exe: error: ld returned 1 exit status
+C:\Users\John\Desktop\SoftwareEngineering2\SoftwareEngineeringProject\SoftwareEngineeringAssignment2\gamePlay.c: In function 'playGame':
+C:\Users\John\Desktop\SoftwareEngineering2\SoftwareEngineeringProject\SoftwareEngineeringAssignment2\gamePlay.c:122:9: warning: implicit declaration of function 'chechObstacle' [-Wimplicit-function-declaration]
+         chechObstacle(boar);
+         ^~~~~~~~~~~~~
+C:\Users\John\Desktop\SoftwareEngineering2\SoftwareEngineeringProject\SoftwareEngineeringAssignment2\gamePlay.c:122:23: error: 'boar' undeclared (first use in this function)
+         chechObstacle(boar);
+                       ^~~~
+C:\Users\John\Desktop\SoftwareEngineering2\SoftwareEngineeringProject\SoftwareEngineeringAssignment2\gamePlay.c:122:23: note: each undeclared identifier is reported only once for each function it appears in
+C:\Users\John\Desktop\SoftwareEngineering2\SoftwareEngineeringProject\SoftwareEngineeringAssignment2\gamePlay.c: At top level:
+C:\Users\John\Desktop\SoftwareEngineering2\SoftwareEngineeringProject\SoftwareEngineeringAssignment2\gamePlay.c:203:6: warning: conflicting types for 'chechObstacle'
+ void chechObstacle(square board[][NUM_COLUMNS]){
+      ^~~~~~~~~~~~~
+C:\Users\John\Desktop\SoftwareEngineering2\SoftwareEngineeringProject\SoftwareEngineeringAssignment2\gamePlay.c:122:9: note: previous implicit declaration of 'chechObstacle' was here
+         chechObstacle(boar);
+         ^~~~~~~~~~~~~
+C:\Users\John\Desktop\SoftwareEngineering2\SoftwareEngineeringProject\SoftwareEngineeringAssignment2\gamePlay.c: In function 'chechObstacle':
+C:\Users\John\Desktop\SoftwareEngineering2\SoftwareEngineeringProject\SoftwareEngineeringAssignment2\gamePlay.c:224:24: error: 'i' undeclared (first use in this function)
+       newNumObstacle = i + 1;
+                        ^

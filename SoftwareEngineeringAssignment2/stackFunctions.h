@@ -18,7 +18,6 @@ bool isEmpty(struct square boardPosition);
 
 char printToken(token *t);
 
-bool charToToken(char valueToConvert, token *t);
 
 
 #endif /* STACKFUNCTIONS_H */

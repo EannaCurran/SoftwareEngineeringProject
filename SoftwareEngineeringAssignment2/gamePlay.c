@@ -5,17 +5,11 @@
 #include <time.h>
 
 #include "defineAssignment2.h"
+#include "gamePlay.h"
 #include "stackFunctions.h"
 #include "gameInitialisation.h"
 #include "gamePrint.h"
 #include "gameInput.h"
-
-int diceRoll();
-
-void moveTokenUpOrDown(char directionInput, struct square board[][NUM_COLUMNS], int columnInput, int rowInput, struct player players[], int i);
-void moveTokenRight(struct square board[][NUM_COLUMNS], int dice, struct player players[], int i);
-bool checkToken(square board[][NUM_COLUMNS], int dice);
-int checkWinTocken(colour colourCkeck, struct player players[], unsigned int numPlayers);
 
 
 void playGame(unsigned int numPlayers, struct square board[][NUM_COLUMNS], struct player players[]) {
@@ -25,7 +19,7 @@ void playGame(unsigned int numPlayers, struct square board[][NUM_COLUMNS], struc
   char directionInput, upDownChoice;;
 
   while(checkForWin == false){
-    for(int i = 0; i < numPlayers; i++){
+    for(int i = 0; i < numPlayers && checkForWin == false; i++){
       printf("Player %d turn\n", i+1);
       dice = diceRoll();
       printf("Player %d rolled %d\n", i+1, dice);
@@ -119,6 +113,9 @@ void playGame(unsigned int numPlayers, struct square board[][NUM_COLUMNS], struc
         moveTokenRight(board, dice, players, columnInputRight);
         printBoard(board);
 
+        chechObstacle(board);
+        printBoard(board);
+
         if (columnInputRight == 7 && !isEmpty(board[dice][8])) {
           winner = checkWinTocken(topColour(board[dice][8]), players, numPlayers);
           if (winner != -1) {
@@ -136,6 +133,7 @@ void playGame(unsigned int numPlayers, struct square board[][NUM_COLUMNS], struc
       }
     }
   }
+  return;
 }
 
 int diceRoll(void){
@@ -168,10 +166,13 @@ void moveTokenRight(struct square board[][NUM_COLUMNS], int dice, struct player 
 bool checkToken(struct square board[][NUM_COLUMNS], int dice){
 
   bool tokenCheck = true;
-  int i = 0;
 
-  for(i = 0; (i < NUM_COLUMNS - 1) && (tokenCheck != false); i++){
-    tokenCheck = isEmpty(board[dice][i]);
+  for(int i = 0; (i < NUM_COLUMNS - 1) && (tokenCheck != false); i++){
+
+    if (board[dice][i].type == OBSTACLE || isEmpty(board[dice][i])) {
+      tokenCheck == true;
+    }
+    else{tokenCheck = false;}
   }
   return tokenCheck;
 }
@@ -198,11 +199,12 @@ int checkWinTocken(colour colourCkeck, struct player players[], unsigned int num
 
 void chechObstacle(square board[][NUM_COLUMNS]){
 
-  static int obstacleList[6][2] = {{5,7},{1,6},{3,5},{2,4},{0,3},{4,2}};
-  static int numObstacle = 5, clearedColumns = 0;
-  bool noTokens = true;
+  static int obstacleList[6][2] = {{4,2},{0,3},{2,4},{3,5},{1,6},{5,7}};
+  static int numObstacle = 0, clearedColumns = 0;
+  bool noTokens = true, moreObstacles = true;
+  int newNumObstacle = 0;
 
-  for (int i = clearedColumns; i < 8; i++) {
+  for (int i = clearedColumns; i < 8 && noTokens == true; i++) {
     for (size_t j = 0; j < NUM_ROWS && noTokens == true; j++) {
       if (!isEmpty(board[j][i])) {
         noTokens = false;
@@ -213,10 +215,23 @@ void chechObstacle(square board[][NUM_COLUMNS]){
     }
 
   }
-  for (size_t i = numObstacle; i >= 0; i++) {
-    if (obstacleList[numObstacle] > clearedColumns ) {
-      /* code */
+  unsigned int j = 0;
+  do{
+    if (obstacleList[j][1] <= clearedColumns ) {
+      newNumObstacle = j + 1;
     }
+    else {moreObstacles = false;}
+    j++;
+  }while(moreObstacles && j < 6);
+
+  for (size_t i = numObstacle; i < newNumObstacle && i < 6; i++) {
+    board[obstacleList[i][0]][obstacleList[i][1]].type = NORMAL;
   }
 
+  if (newNumObstacle != 0) {
+    numObstacle = newNumObstacle;
+  }
+
+
+  return;
 }
