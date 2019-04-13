@@ -1,5 +1,9 @@
+// File containing function prototypes gameInput.c
+// Written by - Eanna Curran
+
 #ifndef GAMEINPUT_H
 #define GAMEINPUT_H
+
 #include "defineAssignment2.h"
 
 // Initialises the function gameInput

@@ -17,11 +17,9 @@ Written by John O'Donnell and Eanna Curran*/
 
 
 int main(void){
-    
-  // Creates variables
-    
+
   // Creates an array which stores the information of each player in the game
-  player players[6]; 
+  player players[6];
   // Creates an array which stores information for each square in the game board
   square board[NUM_ROWS][NUM_COLUMNS];
 
@@ -36,7 +34,7 @@ int main(void){
 
   // Calls the boardSetup function to let the players set up the board before the game begins
   boardSetup(board, players, numPlayers);
-  
+
   // Calls the playGame function to play through the game until a player wins
   playGame(numPlayers, board, players);
 
